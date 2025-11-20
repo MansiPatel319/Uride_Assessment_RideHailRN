@@ -53,9 +53,10 @@ export interface RideResponse {
   };
 }
 export type RootStackParamList = {
-  Home: { rideId: number | null } | undefined;  // Home receives rideId (optional)
-  RequestRide: undefined;                       // RequestRide doesn't need params
-  RideDetails: { rideId: number };             // RideDetails requires rideId
+  Home: { rideId: number | null } | undefined;  // optional rideId
+  RequestRide: undefined;                       // no params
+  RideDetails: { rideId: number };             // rideId required
+  RideActive: { rideId: number };              // rideId required           // RideDetails requires rideId
 };
 
 

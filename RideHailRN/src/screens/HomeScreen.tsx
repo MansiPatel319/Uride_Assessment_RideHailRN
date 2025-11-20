@@ -11,7 +11,7 @@ export default function HomeScreen({ route, navigation }: Props) {
 
   return (
     <View style={styles.container}>
-      <Text>Ride ID: {rideId ?? 'None'}</Text>
+      {rideId? <Text>Ride ID: {rideId ?? 'None'}</Text>: ''}
       <Button
         title="Request Ride"
         onPress={() => navigation.navigate('RequestRide')}
