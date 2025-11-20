@@ -17,7 +17,7 @@ export default function RideActiveScreen({ route, navigation }: Props) {
 
   return (
     <View style={styles.container}>
-      {/* Display the message */}
+
       <Text style={styles.message}>Ride started</Text>
 
       {/* Ride details */}

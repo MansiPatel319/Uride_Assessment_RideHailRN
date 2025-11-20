@@ -1,5 +1,3 @@
-// src/utils/types.ts
-
 export interface Car {
   plate: string;
   make: string;
@@ -35,7 +33,7 @@ export interface RideRequest {
   dropoff: string;
 }
 
-// What you get back from the API after requesting a ride
+//after requesting a ride
 export interface RideResponse {
   id: number;
   passenger: string;
@@ -53,23 +51,8 @@ export interface RideResponse {
   };
 }
 export type RootStackParamList = {
-  Home: { rideId: number | null } | undefined;  // optional rideId
-  RequestRide: undefined;                       // no params
-  RideDetails: { rideId: number };             // rideId required
-  RideActive: { rideId: number };              // rideId required           // RideDetails requires rideId
-};
-
-
-
-
-export interface Ride {
-  id: number;
-  status: 'requested' | 'driver_arrived' | 'in_progress' | 'completed';
-  driver: {
-    name: string;
-    car: {
-      make: string;
-      model: string;
-    };
-  };
+  Home: { rideId: number | null } | undefined; 
+  RequestRide: undefined;                       
+  RideDetails: { rideId: number };             
+  RideActive: { rideId: number };              
 }

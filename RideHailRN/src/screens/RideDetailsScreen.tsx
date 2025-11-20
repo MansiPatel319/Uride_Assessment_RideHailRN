@@ -17,7 +17,7 @@ export default function RideDetailsScreen({ route }: Props) {
   if (!ride) return <Text>Ride Not Found</Text>;
 
   const startRide = async () => {
-    // Optional backend call to start ride
+    // call to start ride
     await api.post(`/rides/${ride.id}/start`);
     navigation.navigate('RideActive', { rideId: ride.id });
   };
